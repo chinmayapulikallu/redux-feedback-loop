@@ -23,14 +23,13 @@ class App extends Component {
         {JSON.stringify(this.props.dispatch )}
         <Router>
           {/* Routes for components, FormFeeling is homepage */}
-          
           <Route exact path="/" render={(props)=><FormFeelings {...props} dispatch={this.props.dispatch}/>} />
           <Route  path="/understanding" render={(props) => <FormUnderstand {...props} dispatch={this.props.dispatch} />} />
           <Route  path="/support" render={(props) => <FormSupport {...props} dispatch={this.props.dispatch} />} />
           <Route  path="/comments" render={(props) => <FormComments {...props} dispatch={this.props.dispatch} />} />
           <Route  path="/review" render={(props) => <Review {...this.props} test={this.props} dispatch={this.props.dispatch} />} />
           <Route  path="/confirmation" render={(props) => <Confirmation {...props} dispatch={this.props.dispatch} />} />
-          <Route  path="/Admin" render={(props) => <Admin {...props} dispatch={this.props.dispatch} />} />
+          <Route  path="/admin" render={(props) => <Admin {...props} dispatch={this.props.dispatch} />} /> 
         </Router>
        
       </div>
