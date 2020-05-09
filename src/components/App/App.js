@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import './App.css';
-import {HashRouter as Router, Route} from 'reacter-router-dom';
+import {HashRouter as Router, Route} from 'react-router-dom';
 //importing components
 import Header from '../Header/Header';
 import FormFeelings from '../FormFeelings/FormFeelings';
+import FormUnderstand from '../FormUnderstand/FormUnderstand';
+import FormSupport from '../FormSupport/FormSupport';
+import FormComments from '../FormComments/FormComments';
+import Confirmation from '../Confirmation/Confirmation';
+import Admin from '../Admin/Admin';
+
 
 
 class App extends Component {
@@ -14,15 +19,14 @@ class App extends Component {
         <Header />
         <Router>
           {/* Routes for components, FormFeeling is homepage */}
-          <Route exact path = "/" component={FormToday} />
+          <Route exact path = "/" component={FormFeelings} />
           <Route exact path="/understanding" component={FormUnderstand} />
           <Route exact path="/support" component={FormSupport} />
-          <Route exact path="/" component={FormComments} />
-          <Route exact path="/" component={Confirmation} />
-          <Route exact path="/" component={Admin} />
-
+          <Route exact path="/comments" component={FormComments} />
+          <Route exact path="/confirmation" component={Confirmation} />
+          <Route exact path="/admin" component={Admin} />
         </Router>
-        <FormFeelings />
+       
       </div>
     );
   }

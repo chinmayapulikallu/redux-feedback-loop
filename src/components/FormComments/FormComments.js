@@ -18,4 +18,4 @@ class FormComments extends Component {
         )
     }
 }
-export default FormSupport;
+export default FormComments;
