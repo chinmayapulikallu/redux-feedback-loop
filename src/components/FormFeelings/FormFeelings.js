@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {connect} from 'react-redux';
+
 
 
 class FormFeelings extends Component {
@@ -15,14 +15,14 @@ class FormFeelings extends Component {
     }
 
     buttonClick = () => {
-        if(this.state.feeling === '0') {
+        if(this.state.feeling === '') {
             alert('select a value!!');
         }
         this.props.dispatch({
             type: 'ADD_FEELING', payload: this.state.feeling
         })
         this.props.history.push('/understanding')
-    } // dispatching to reducer
+    } // dispatching to reducer and moves to understanding page
 
     render() {
         return (
@@ -44,6 +44,6 @@ class FormFeelings extends Component {
     }
 }
 
-const putReduxStateOnProps = (reduxState) => ({reduxState});
 
-export default connect()(FormFeelings);
+
+export default FormFeelings;

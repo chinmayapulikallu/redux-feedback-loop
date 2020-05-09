@@ -17,10 +17,10 @@ class FormSupport extends Component {
             alert('select a value!!');
         }
         this.props.dispatch({
-            type: 'ADD_SUPPORT', payload: this.state.feeling
+            type: 'ADD_SUPPORT', payload: this.state.support
         })
         this.props.history.push('/comments')
-    } // dispatching to reducer
+    } // dispatching to reducer and moves to comments page
 
     render() {
         return (
@@ -39,7 +39,7 @@ class FormSupport extends Component {
                     </div>   
                 </div>
 
-                <button className="nextButton">NEXT</button>
+                <button className="nextButton" onClick={this.buttonClick}>NEXT</button>
             </div>
         )
     }

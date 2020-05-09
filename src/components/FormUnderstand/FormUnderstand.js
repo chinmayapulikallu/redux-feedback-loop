@@ -17,10 +17,10 @@ class FormUnderstand extends Component {
             alert('select a value!!');
         }
         this.props.dispatch({
-            type: 'ADD_UNDERSTANDING', payload: this.state.feeling
+            type: 'ADD_UNDERSTANDING', payload: this.state.understanding
         })
         this.props.history.push('/support')
-    } // dispatching to reducer
+    }  //dispatching to reducer and moves to support page
 
     render() {
         return (
