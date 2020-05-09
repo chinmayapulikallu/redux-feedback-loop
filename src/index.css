@@ -3,3 +3,28 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.nextButton {
+  float: right;
+  padding: 1.5%;
+  margin: 5%;
+  font-size: larger;
+}
+
+h1{
+  font-size: 70px;
+  text-align: center;
+}
+.formDiv {
+  margin-top: 3%;
+  padding: 2%;
+  text-align: center;
+  margin-left: 4%;
+}
+.subDiv {
+  text-align: left;
+  margin-top: 6%;
+  margin-left: 30%;
+  margin-bottom: 10%;
+
+}
