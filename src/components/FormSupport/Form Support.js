@@ -9,8 +9,16 @@ class FormSupport extends Component {
             <div className="formDiv">
                 <h1>How well are you being supported?</h1>
                 <div className="subDiv">
-                    <h3>Support?</h3>
-                    <input className="inputClass" type="number" onChange={this.handleChange}></input>
+                    <div className="subDiv">
+                        <select id="support" name="Support?" onChange={this.handleChange}>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="1">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>   
                 </div>
 
                 <button className="nextButton">NEXT</button>
