@@ -32,11 +32,11 @@ Before getting started, the following software have been installed on the comput
 ## Check List
 
 ### Base Mode:
-- [] Create database and tables
-- [] install npm
-      - [] run server
-      - [] run client
-- [] install redux
+- [x] Create database and tables
+- [x] install npm
+      - [x] run server
+      - [x] run client
+- [x] install redux
     - [] setup the base for Redux
 - [] create components
 - [] Import Routers
