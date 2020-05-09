@@ -1,9 +1,27 @@
 import React, { Component } from 'react'
 
 class FormSupport extends Component {
+    state = {
+        support: '0'
+    }
+     // handleChange to input the values and change the state
     handleChange = (event) => {
         console.log('in handleChange', event.target.value);
+        this.setState({
+            support: event.target.value
+        })
     }
+
+    buttonClick = () => {
+        if (this.state.support === '0') {
+            alert('select a value!!');
+        }
+        this.props.dispatch({
+            type: 'ADD_SUPPORT', payload: this.state.feeling
+        })
+        this.props.history.push('/comments')
+    } // dispatching to reducer
+
     render() {
         return (
             <div className="formDiv">

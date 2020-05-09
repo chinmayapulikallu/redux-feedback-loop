@@ -22,7 +22,7 @@ class FormFeelings extends Component {
             type: 'ADD_FEELING', payload: this.state.feeling
         })
         this.props.history.push('/understanding')
-    } //
+    } // dispatching to reducer
 
     render() {
         return (

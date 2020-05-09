@@ -1,9 +1,27 @@
 import React, { Component } from 'react'
 
 class FormUnderstand extends Component {
+    state = {
+        understanding: '0'
+    }
+     // handleChange to input the values and change the state
     handleChange = (event) => {
         console.log('in handleChange', event.target.value);
-    }
+        this.setState({
+            understanding: event.target.value
+        })
+    } 
+
+    buttonClick = () => {
+        if (this.state.understanding === '0') {
+            alert('select a value!!');
+        }
+        this.props.dispatch({
+            type: 'ADD_UNDERSTANDING', payload: this.state.feeling
+        })
+        this.props.history.push('/support')
+    } // dispatching to reducer
+
     render() {
         return (
             <div className="formDiv">
@@ -20,8 +38,7 @@ class FormUnderstand extends Component {
                         </select>
                     </div>   
                 </div>
-
-                <button className="nextButton">NEXT</button>
+                <button className="nextButton" onClick={this.buttonClick}>NEXT</button>
             </div>
         )
     }

@@ -12,7 +12,6 @@ class FormComments extends Component {
                     <h3>Comments</h3>
                     <input className="inputClass" type="text" onChange={this.handleChange}></input>
                 </div>
-
                 <button className="nextButton">NEXT</button>
             </div>
         )
