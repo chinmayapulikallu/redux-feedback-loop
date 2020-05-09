@@ -1,10 +1,29 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
 
 
 class FormFeelings extends Component {
+    state = {
+        feeling: '0'
+    }
+    // handleChange to input the values and change the state
     handleChange = (event) =>{
         console.log('in handleChange', event.target.value);
+        this.setState({
+            feeling: event.target.value
+        })
     }
+
+    buttonClick = () => {
+        if(this.state.feeling === '0') {
+            alert('select a value!!');
+        }
+        this.props.dispatch({
+            type: 'ADD_FEELING', payload: this.state.feeling
+        })
+        this.props.history.push('/understanding')
+    } //
+
     render() {
         return (
             <div className="formDiv">
@@ -19,9 +38,12 @@ class FormFeelings extends Component {
                         <option value="5">5</option>
                     </select>
                     </div>      
-                <button className="nextButton">NEXT</button>
+                <button className="nextButton" onClick={this.buttonClick}>NEXT</button>
             </div>
         )
     }
 }
-export default FormFeelings;
+
+const putReduxStateOnProps = (reduxState) => ({reduxState});
+
+export default connect()(FormFeelings);
