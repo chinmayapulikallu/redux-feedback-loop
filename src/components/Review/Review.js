@@ -12,11 +12,14 @@ class Review extends Component {
 
     render() {
         console.log("review page :: ",this.props)
+        // const feelingValue = this.props.reduxState.feedbacks.find(fff => fff.name === 'feeling').value;
+       
         return (
             <div>
                <h1>Review Your Feedback</h1>
-               <h3>Feelings:</h3>
-               {/* <p>{this.props.dispatch}</p> */}
+                <h3>Feelings:</h3>
+                <p>{this.props.reduxState.feeling}</p>
+                 {/* <p>{feelingValue}</p> */}
                <h3>UnderStanding:</h3>
                 {/* <p>{this.props.dispatch}</p> */}
                <h3>Support:</h3>

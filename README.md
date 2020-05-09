@@ -37,13 +37,13 @@ Before getting started, the following software have been installed on the comput
       - [x] run server
       - [x] run client
 - [x] install redux
-    - [] setup the base for Redux
-- [] create components
-- [] Import Routers
-    - [] create a Next button 
-    - [] link to the next components
-- [] Create review component
-    - [] submit button
+    - [x] setup the base for Redux
+- [x] create components
+- [x] Import Routers
+    - [x] create a Next button 
+    - [x] link to the next components
+- [x] Create review component
+    - [x] submit button
 - [] Send feedback to the server
 - [] save the submission in database
 - [] create submission success page

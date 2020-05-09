@@ -1,10 +1,17 @@
 import React, { Component } from 'react'
 
 class Confirmation extends Component {
+//buttonClick takes to Feelings page on click
+    buttonClick = () => {
+        this.history.push('/')
+    }
+
     render() {
         return (
             <div>
-                <h1>Hello Confirmation</h1>
+                <h1>Thank You!</h1>
+                <h3>Feedback has been submitted</h3>
+                <button onClick={this.buttonClick}>Back To Home</button>
             </div>
         )
     }

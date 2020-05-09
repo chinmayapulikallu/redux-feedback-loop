@@ -8,10 +8,7 @@ import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 
 const initialState = {
-    // feeling: '',
-    // understanding: '',
-    // support: '',
-    // comments: ''
+    
     feedbacks: []
 }
 
@@ -20,14 +17,12 @@ const feedbackReducer = (state = initialState, action) => {
     if(action.type === 'ADD_FEELING') {
         console.log('action payload', action.payload);
         return {
-
             feedbacks:[...state.feedbacks, {name:"feeling", value: action.payload}]
         }
         
     } else if (action.type === 'ADD_UNDERSTANDING'){
         console.log('action payload', action.payload);
         return {
-            
             feedbacks:[...state.feedbacks, {name:"understanding", value: action.payload}]
         }
        
@@ -40,12 +35,10 @@ const feedbackReducer = (state = initialState, action) => {
     } else if (action.type === 'ADD_COMMENTS') {
         console.log('action payload', action.payload);
         return {
-            feedbacks: [...state.feedbacks, { name: "comment", value: action.payload }]
+            feedbacks: [...state.feedbacks, { name: "comments", value: action.payload }]
         }
         
     }
-
-
     return state;
 }
 

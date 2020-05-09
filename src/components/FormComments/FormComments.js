@@ -2,21 +2,21 @@ import React, { Component } from 'react'
 
 class FormComments extends Component {
     state ={
-        comment: ''
+        comments: ''
     }
 
     // handleChange to input the values and set the state
-    handleChange = (event) => {
+    handleChange = (event, typeofChange) => {
         console.log('in handleChange', event.target.value);
         this.setState({
-            comment: event.target.value
+            comments: event.target.value
         })
     } 
 
     buttonClick = () => {
         this.props.dispatch({
-            type: 'ADD_COMMENT',
-            payload: this.state.comment
+            type: 'ADD_COMMENTS',
+            payload: this.state.comments
         })
         this.props.history.push('/review');
     }  //dispatches to reducer, and takes to review page
