@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import {Button} from '@material-ui/core';
+import 'typeface-roboto';
 
 
 class FormFeelings extends Component {
@@ -26,9 +27,9 @@ class FormFeelings extends Component {
 
     render() {
         return (
-            <div className="formDiv">
-                    <h1>How are you feeling Today?</h1>
-                    <div className="subDiv">
+            <div>
+                 <h1>How are you feeling Today?</h1>
+                 <div>
                     <select id="feeling" name="Feeling?" onChange={this.handleChange}>
                         <option value="0">0</option>
                         <option value="1">1</option>
@@ -37,8 +38,8 @@ class FormFeelings extends Component {
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select>
-                    </div>      
-                <button className="nextButton" onClick={this.buttonClick}>NEXT</button>
+                </div>      
+                <Button  color="primary" variant="contained" size="large" onClick={this.buttonClick}>NEXT</Button>
             </div>
         )
     }

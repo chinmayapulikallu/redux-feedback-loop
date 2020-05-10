@@ -52,7 +52,7 @@ Before getting started, the following software have been installed on the comput
 
 ### Stretch Mode:
  
- - [] Update scores
+ - [x] Update scores
  - [] Styling using Material-UI
  - [] Admin
 

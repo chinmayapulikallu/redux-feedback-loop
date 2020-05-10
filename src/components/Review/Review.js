@@ -1,5 +1,15 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import {Button} from '@material-ui/core';
+import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+import {createMuiTheme} from '@material-ui/core/styles';
+import { green } from '@material-ui/core/colors';
+
+const myTheme = createMuiTheme({
+                palette:{
+                    primary: green
+                }
+})
 
 class Review extends Component {
 
@@ -51,7 +61,9 @@ class Review extends Component {
                 <h3>Support:{supportValue}</h3>
                 <h3>Comments:{commentsValue}</h3>
                <div>
-                   <button onClick={this.buttonClick}>Submit</button>
+                   <MuiThemeProvider theme = {myTheme}>
+                   <Button color="primary" variant="contained" size="large"onClick={this.buttonClick}>Submit</Button>
+                   </MuiThemeProvider>
                </div>
             </div>
         

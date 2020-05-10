@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Button } from '@material-ui/core';
 
 class FormComments extends Component {
     state ={
@@ -28,14 +29,14 @@ class FormComments extends Component {
 
     render() {
         return (
-            <div className="formDiv">
+            <div>
                 <h1>Any comments you want to leave?</h1>
-                <div className="subDiv">
+                <div>
                     <h3>Comments</h3>
                     <input className="inputClass" type="text" onChange={this.handleChange}></input>
-                </div>
-                <button className="nextButton" onClick={this.buttonClick}>NEXT</button>
-                <button onClick={this.previousClick}>PREVIOUS</button>
+                    <Button color="primary" variant="contained" size="large" onClick={this.previousClick}>PREVIOUS</Button>
+                    <Button color="primary" variant="contained" size="large" onClick={this.buttonClick}>NEXT</Button> 
+                </div>     
             </div>
         )
     }

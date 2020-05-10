@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Button } from '@material-ui/core';
 
 class FormSupport extends Component {
     state = {
@@ -28,23 +29,20 @@ class FormSupport extends Component {
 
     render() {
         return (
-            <div className="formDiv">
+            <div>
                 <h1>How well are you being supported?</h1>
-                <div className="subDiv">
-                    <div className="subDiv">
-                        <select id="support" name="Support?" onChange={this.handleChange}>
+                <div>
+                    <select id="support" name="Support?" onChange={this.handleChange}>
                             <option value="0">0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
                             <option value="5">5</option>
-                        </select>
-                    </div>   
+                    </select>  
                 </div>
-
-                <button className="nextButton" onClick={this.buttonClick}>NEXT</button>
-                <button onClick={this.previousClick}>PREVIOUS</button>
+                <Button color="primary" variant="contained" size="large" onClick={this.previousClick}>PREVIOUS</Button>
+                <Button color="primary" variant="contained" size="large" onClick={this.buttonClick}>NEXT</Button>      
             </div>
         )
     }
