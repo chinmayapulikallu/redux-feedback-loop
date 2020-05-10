@@ -29,7 +29,7 @@ Before getting started, the following software have been installed on the comput
 -  Redux
 
 
-## Check List
+### Check List
 
 ### Base Mode:
 - [x] Create database and tables
