@@ -27,7 +27,7 @@ class App extends Component {
           <Route  path="/understanding" render={(props) => <FormUnderstand {...props} dispatch={this.props.dispatch} />} />
           <Route  path="/support" render={(props) => <FormSupport {...props} dispatch={this.props.dispatch} />} />
           <Route  path="/comments" render={(props) => <FormComments {...props} dispatch={this.props.dispatch} />} />
-          <Route  path="/review" render={(props) => <Review {...this.props} test={this.props} dispatch={this.props.dispatch} />} />
+          <Route  path="/review" render={(props) => <Review {...this.props} routeProps={props} dispatch={this.props.dispatch} />} />
           <Route  path="/confirmation" render={(props) => <Confirmation {...props} dispatch={this.props.dispatch} />} />
           <Route  path="/admin" render={(props) => <Admin {...props} dispatch={this.props.dispatch} />} /> 
         </Router>

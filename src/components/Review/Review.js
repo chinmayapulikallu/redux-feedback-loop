@@ -16,7 +16,7 @@ class Review extends Component {
             comments: commentsValue
         })
     }
-    
+
     buttonClick = () => {       
         let feedbackToSend = this.populateFeedback()
         axios({
@@ -24,11 +24,11 @@ class Review extends Component {
             url: '/feedback',
             data: feedbackToSend
         }).then (response => {
-            console.log('response from database', response);
+            console.log('response from database', response, this.props);    
             this.props.dispatch({
                 type: 'NEXT_FEEDBACK'
             })  // clears the state in reducers after posting feedback successfully into the database
-            this.props.history.push('/confirmation')  //from review page goes to confirmation page
+            this.props.routeProps.history.push('/confirmation')  //from review page goes to confirmation page
         }).catch(error => {
             alert('error!!');
             console.log(error);

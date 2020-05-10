@@ -44,11 +44,11 @@ Before getting started, the following software have been installed on the comput
     - [x] link to the next components
 - [x] Create review component
     - [x] submit button
-- [] Send feedback to the server
-- [] save the submission in database
-- [] create submission success page
-    - [] create a link to take a new survey
-    - [] Reset the old values
+- [x] Send feedback to the server
+- [x] save the submission in database
+- [x] create submission success page
+    - [x] create a link to take a new survey
+    - [x] Reset the old values
 
 ### Stretch Mode:
  

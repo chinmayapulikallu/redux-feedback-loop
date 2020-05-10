@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class Confirmation extends Component {
 //buttonClick takes to Feelings page on click
     buttonClick = () => {
-        this.history.push('/')
+        this.props.history.push('/')
     }
 
     render() {

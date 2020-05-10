@@ -36,8 +36,7 @@ const feedbackReducer = (state = initialState, action) => {
         return {
             feedbacks: [...state.feedbacks, { name: "comments", value: action.payload }]
         }   
-    } else if (action.type === 'NEW_FEEDBACK') {
-        state = '';
+    } else if (action.type === 'NEXT_FEEDBACK') {
         return state;
     }
     return state;
