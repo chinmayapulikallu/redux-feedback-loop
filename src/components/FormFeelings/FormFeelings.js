@@ -28,9 +28,8 @@ class FormFeelings extends Component {
     render() {
         return (
             <div>
-                 <h1>How are you feeling Today?</h1>
-                 <div>
-                    <select id="feeling" name="Feeling?" onChange={this.handleChange}>
+                <h1>How are you feeling Today?</h1>
+                  <select id="feeling" name="Feeling?" onChange={this.handleChange}>
                         <option value="0">0</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -38,8 +37,8 @@ class FormFeelings extends Component {
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select>
-                </div>      
-                <Button  color="primary" variant="contained" size="large" onClick={this.buttonClick}>NEXT</Button>
+                        
+                <Button  color="primary" variant="contained" size="large"  onClick={this.buttonClick}>NEXT</Button>
             </div>
         )
     }

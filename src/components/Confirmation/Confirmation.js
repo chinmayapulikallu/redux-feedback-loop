@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Button } from '@material-ui/core';
 
 class Confirmation extends Component {
+
 //buttonClick takes to Feelings page on click
     buttonClick = () => {
         this.props.history.push('/')

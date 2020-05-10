@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from '@material-ui/core';
+import TextField from '@material-ui/core/TextField';
 
 class FormComments extends Component {
     state ={
@@ -33,7 +34,7 @@ class FormComments extends Component {
                 <h1>Any comments you want to leave?</h1>
                 <div>
                     <h3>Comments</h3>
-                    <input className="inputClass" type="text" onChange={this.handleChange}></input>
+                    <TextField id="standard-basic" label="Comments" type="text" onChange={this.handleChange}/>
                     <Button color="primary" variant="contained" size="large" onClick={this.previousClick}>PREVIOUS</Button>
                     <Button color="primary" variant="contained" size="large" onClick={this.buttonClick}>NEXT</Button> 
                 </div>     
