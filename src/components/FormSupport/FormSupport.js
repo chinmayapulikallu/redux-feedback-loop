@@ -16,11 +16,12 @@ class FormSupport extends Component {
     buttonClick = () => {
         if (this.state.support === '0') {
             alert('select a value!!');
-        }
-        this.props.dispatch({
+        } else {
+            this.props.dispatch({
             type: 'ADD_SUPPORT', payload: this.state.support
-        })
+             })
         this.props.history.push('/comments')
+        }     
     } // dispatching to reducer and moves to comments page
 
     previousClick = () => {

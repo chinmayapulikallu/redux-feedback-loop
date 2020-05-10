@@ -16,11 +16,12 @@ class FormUnderstand extends Component {
     buttonClick = () => {
         if (this.state.understanding === '0') {
             alert('select a value!!');
-        }
-        this.props.dispatch({
-            type: 'ADD_UNDERSTANDING', payload: this.state.understanding
-        })
-        this.props.history.push('/support')
+        } else {
+            this.props.dispatch({
+                type: 'ADD_UNDERSTANDING', payload: this.state.understanding
+            })
+            this.props.history.push('/support')
+        }   
     }  //dispatching to reducer and moves to support page
 
     previousClick = () => {
