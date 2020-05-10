@@ -20,7 +20,7 @@ class Confirmation extends Component {
                 <h1>Thank You!</h1>
                 <h3>Feedback has been submitted</h3>
                 <div className="home-button">
-                    <Button color="primary" size="large" variant="contained" onClick={this.buttonClick}>Back To Home</Button>
+                    <Button color="primary" size="large" variant="contained" onClick={this.buttonClick}>Leave New Feedback</Button>
                 </div>
                 <div className="home-button">
                     <Button color="primary" size="large" variant="contained" onClick={this.adminClick}>Admin</Button>

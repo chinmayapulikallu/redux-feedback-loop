@@ -5,6 +5,7 @@ class FormSupport extends Component {
     state = {
         support: '0'
     }
+
      // handleChange to input the values and change the state
     handleChange = (event) => {
         console.log('in handleChange', event.target.value);
@@ -13,6 +14,7 @@ class FormSupport extends Component {
         })
     }
 
+    // dispatching to reducer and moves to comments page
     buttonClick = () => {
         if (this.state.support === '0') {
             alert('select a value!!');
@@ -22,12 +24,12 @@ class FormSupport extends Component {
              })
         this.props.history.push('/comments')
         }     
-    } // dispatching to reducer and moves to comments page
+    } 
 
+    // allows users to go back to previous page and change their score.
     previousClick = () => {
         this.props.history.push('/understanding');
-    }  // allows users to go back to previous page and change their score.
-
+    }  
     render() {
         return (
             <div className="form">

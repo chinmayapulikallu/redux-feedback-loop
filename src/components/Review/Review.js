@@ -1,15 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import {Button} from '@material-ui/core';
-// import {ThemeProvider as MuiThemeProvider} from '@material-ui/core/styles/MuiThemeProvider';
-// import {createMuiTheme} from '@material-ui/core/styles';
-// import { green } from '@material-ui/core/colors';
-
-// const myTheme = createMuiTheme({
-//                 palette:{
-//                     primary: green
-//                 }
-// }) //setting the color of palette primary to green
 
 class Review extends Component {
 
@@ -19,8 +10,7 @@ class Review extends Component {
         let understandingValue = null
         let supportValue = null
         let commentsValue = null
-        // debugger;
-        
+
         if (this.props.reduxState.feedbacks.length > 0) {
             feelingValue = this.props.reduxState.feedbacks.find(feedback => feedback.name === 'feeling').value;
             understandingValue = this.props.reduxState.feedbacks.find(feedback => feedback.name === 'understanding').value;
@@ -35,6 +25,7 @@ class Review extends Component {
         })
     }
 
+    // calling axios POST request to the feedback into the server
     buttonClick = () => {       
         let feedbackToSend = this.populateFeedback()
         axios({
@@ -55,9 +46,7 @@ class Review extends Component {
 
     render() {
         console.log("review page :: ",this.props)
-        // console.log("review page :: ", this.populateFeedback())
         const feedback = this.populateFeedback()
-        
          return (
             <div>
                <h1>Review Your Feedback</h1>
@@ -66,12 +55,9 @@ class Review extends Component {
                 <h3>Support:{feedback.support}</h3>
                 <h3>Comments:{feedback.comments}</h3>
                <div>
-                   {/* <MuiThemeProvider theme = {myTheme}> */}
                    <Button color="primary" variant="contained" size="large"onClick={this.buttonClick}>Submit</Button>
-                   {/* </MuiThemeProvider> */}
                </div>
-            </div>
-        
+            </div>   
         )
     }
 }

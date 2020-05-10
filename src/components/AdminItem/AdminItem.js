@@ -9,8 +9,9 @@ class AdminItem extends Component {
 
     handleClick = () => {
         console.log('in handleClick', this.props.feedback.id);
+        alert('Are you sure you want to delete it?');
         this.props.deleteFeedback(this.props.feedback.id);
-    } //on delete, this function deletes feedback matching id
+    } //on delete, displays a normal alert, this function deletes feedback matching id
     
     
     render() {

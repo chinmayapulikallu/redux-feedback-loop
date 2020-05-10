@@ -53,8 +53,12 @@ Before getting started, the following software have been installed on the comput
 ### Stretch Mode:
  
  - [x] Update scores
- - [] Styling using Material-UI
- - [] Admin
+ - [x] Styling using Material-UI
+ - [x] Created Admin Component
+   - [x] map data from server and render to dom
+   - [x] Add a delete button on click to delete the feedback selected and update database
+
+
 
 
 

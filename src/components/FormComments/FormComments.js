@@ -14,19 +14,19 @@ class FormComments extends Component {
             comments: event.target.value
         })
     } 
-
+    //dispatches to reducer, and takes to review page
     buttonClick = () => {
         this.props.dispatch({
             type: 'ADD_COMMENTS',
             payload: this.state.comments
         })
         this.props.history.push('/review');
-    }  //dispatches to reducer, and takes to review page
+    }  
 
+    // allows users to go back to previous page and change their score.
     previousClick = () => {
         this.props.history.push('/understanding');
-    } // allows users to go back to previous page and change their score.
-
+    } 
 
     render() {
         return (

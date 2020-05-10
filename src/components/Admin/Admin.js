@@ -13,14 +13,14 @@ import './Admin.css';
 
 
 class Admin extends Component {
-    // const classes = () => useStyles();
     state = {
         feedbackList: []
     }
+
     componentDidMount = () => {
         this.getFeedBack();
     }
-
+// axios request to delete a feedback from database
     deleteFeedback = (feedbackId) => {
         console.log('in feedback', feedbackId);
         axios.delete(`feedback/${feedbackId}`)
@@ -31,9 +31,9 @@ class Admin extends Component {
                 alert(`couldn't delete Feedback. Try again later`);
                 console.log(error);
             })
-    } // axios request to delete a feedback from database
+    } 
     
-
+// GET request for display data on to the page
     getFeedBack = () => {
         axios({
             method: 'GET',
@@ -46,11 +46,12 @@ class Admin extends Component {
             alert(' error getting data from server');
             console.log('error to get data from server', error);
         })
-    } // GET request for display data on to the page
+    } 
 
+//on click takes back to the Home page
     returnHome = () => {
         this.props.history.push('/');
-    }  //on click takes back to the Home page
+    }  
 
     render() {
         return (

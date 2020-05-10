@@ -5,6 +5,7 @@ class FormUnderstand extends Component {
     state = {
         understanding: '0'
     }
+    
      // handleChange to input the values and change the state
     handleChange = (event) => {
         console.log('in handleChange', event.target.value);
@@ -13,6 +14,7 @@ class FormUnderstand extends Component {
         })
     } 
 
+    //dispatching to reducer and moves to support page
     buttonClick = () => {
         if (this.state.understanding === '0') {
             alert('select a value!!');
@@ -22,12 +24,12 @@ class FormUnderstand extends Component {
             })
             this.props.history.push('/support')
         }   
-    }  //dispatching to reducer and moves to support page
+    }  
 
+    // allows users to go back to previous page and change their score.
     previousClick = () => {
         this.props.history.push('/');
-    }  // allows users to go back to previous page and change their score.
-
+    }  
     render() {
         return (
             <div className="form">

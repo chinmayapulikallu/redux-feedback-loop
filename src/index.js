@@ -15,6 +15,7 @@ const feedbackReducer = (state = initialState, action) => {
     console.log("current state :: ", state.feedbacks)
     if(action.type === 'ADD_FEELING') {
         console.log('action payload', action.payload);
+        //used filter to get the modified value and ignoring the previous value
         const newFeedBacks = state.feedbacks.filter(feedback => feedback.name !== 'feeling')
         return {
             feedbacks: [...newFeedBacks, {name:"feeling", value: action.payload}]
@@ -22,6 +23,7 @@ const feedbackReducer = (state = initialState, action) => {
         
     } else if (action.type === 'ADD_UNDERSTANDING'){
         console.log('action payload', action.payload);
+        //used filter to get the modified value and ignoring the previous value
         const newFeedBacks = state.feedbacks.filter(feedback => feedback.name !== 'understanding')
         return {
             feedbacks:[...newFeedBacks, {name:"understanding", value: action.payload}]
@@ -29,6 +31,7 @@ const feedbackReducer = (state = initialState, action) => {
        
     } else if (action.type === 'ADD_SUPPORT') {
         console.log('action payload', action.payload);
+        //used filter to get the modified value and ignoring the previous value
         const newFeedBacks = state.feedbacks.filter(feedback => feedback.name !== 'support')
         return {
             feedbacks: [...newFeedBacks, { name: "support", value: action.payload }]
@@ -36,6 +39,7 @@ const feedbackReducer = (state = initialState, action) => {
      
     } else if (action.type === 'ADD_COMMENTS') {
         console.log('action payload', action.payload);
+        //used filter to get the modified value and ignoring the previous value
         const newFeedBacks = state.feedbacks.filter(feedback => feedback.name !== 'comments')
         return {
             feedbacks: [...newFeedBacks, { name: "comments", value: action.payload }]

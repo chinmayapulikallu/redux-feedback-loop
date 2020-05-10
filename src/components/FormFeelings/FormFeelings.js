@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import {Button} from '@material-ui/core';
-import 'typeface-roboto';
+
 
 
 class FormFeelings extends Component {
     state = {
         feeling: '0'
     }
+    
     // handleChange to input the values and change the state
     handleChange = (event) =>{
         console.log('in handleChange', event.target.value);
@@ -15,6 +16,7 @@ class FormFeelings extends Component {
         })
     }
 
+    // dispatching to reducer and moves to understanding page
     buttonClick = () => {
         if(this.state.feeling === '0') {
             alert('select a value!!');
@@ -22,9 +24,9 @@ class FormFeelings extends Component {
             this.props.dispatch({
                 type: 'ADD_FEELING', payload: this.state.feeling
             })
-            this.props.history.push('/understanding')
+            this.props.history.push('/understanding') 
         }
-    } // dispatching to reducer and moves to understanding page
+    } 
 
     render() {
         return (
