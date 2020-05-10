@@ -29,10 +29,10 @@ class FormSupport extends Component {
 
     render() {
         return (
-            <div>
-                <h1>How well are you being supported?</h1>
+            <div className="form">
+                <h1 className="form-header">How well are you being supported?</h1>
                 <div>
-                    <select id="support" name="Support?" onChange={this.handleChange}>
+                    <select id="support" name="Support?" className="form-input" onChange={this.handleChange}>
                             <option value="0">0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -41,8 +41,10 @@ class FormSupport extends Component {
                             <option value="5">5</option>
                     </select>  
                 </div>
-                <Button color="primary" variant="contained" size="large" onClick={this.previousClick}>PREVIOUS</Button>
-                <Button color="primary" variant="contained" size="large" onClick={this.buttonClick}>NEXT</Button>      
+                <div className="button"> 
+                    <Button className="form-previous" color="primary" variant="contained" size="large" onClick={this.previousClick}>PREVIOUS</Button>
+                    <Button className="form-next" color="primary" variant="contained" size="large" onClick={this.buttonClick}>NEXT</Button>      
+                </div>
             </div>
         )
     }

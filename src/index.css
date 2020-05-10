@@ -4,3 +4,34 @@ body {
   font-family: sans-serif;
 }
 
+.form {
+  margin : 30px;
+  padding: 20px;
+}
+
+.form-header {
+  font-size: 5em;
+}
+
+.form-input {
+  margin: 20px;
+  padding: 20px;
+}
+
+.form-next {
+  float: right;  
+  width: 100px;
+  height: 50px;
+}
+
+.form-previous {
+  float: left;
+  width: 100px;
+  height: 50px;
+}
+
+.button {
+  padding: 250px;
+  margin: 20px; 
+}
+

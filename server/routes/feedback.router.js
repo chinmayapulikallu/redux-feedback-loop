@@ -20,7 +20,7 @@ router.post('/', (req, res) => {
 router.get('/', (req, res) => {
     let queryString = `SELECT * FROM "feedback" ORDER BY "id";`
     pool.query(queryString).then(results => {
-        res.send(results.row);
+        res.send(results.rows);
     }).catch(error => {
         console.log(error);
         res.sendStatus(500);

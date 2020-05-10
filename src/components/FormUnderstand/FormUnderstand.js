@@ -29,10 +29,10 @@ class FormUnderstand extends Component {
 
     render() {
         return (
-            <div>
-                <h1>How well are you understanding the content?</h1>
+            <div className="form">
+                <h1 className="form-header">How well are you understanding the content?</h1>
                 <div>
-                     <select id="understanding" name="Understanding?" onChange={this.handleChange}>
+                    <select id="understanding" name="Understanding?" className="form-input" onChange={this.handleChange}>
                             <option value="0">0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -40,9 +40,11 @@ class FormUnderstand extends Component {
                             <option value="4">4</option>
                             <option value="5">5</option>
                         </select>
-                </div>   
-                <Button color="primary" variant="contained" size="large" onClick={this.previousClick}>PREVIOUS</Button>
-                <Button color="primary" variant="contained" size="large" onClick={this.buttonClick}>NEXT</Button>      
+                </div> 
+                <div className="button">  
+                    <Button className="form-previous" color="primary" variant="contained" size="large" onClick={this.previousClick}>PREVIOUS</Button>
+                    <Button className="form-next" color="primary" variant="contained" size="large" onClick={this.buttonClick}>NEXT</Button> 
+                </div>     
             </div>
         )
     }

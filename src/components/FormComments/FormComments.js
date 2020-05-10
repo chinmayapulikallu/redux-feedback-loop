@@ -30,13 +30,14 @@ class FormComments extends Component {
 
     render() {
         return (
-            <div>
-                <h1>Any comments you want to leave?</h1>
+            <div className="form">
+                <h1 className="form-header">Any comments you want to leave?</h1>
                 <div>
-                    <h3>Comments</h3>
-                    <TextField id="standard-basic" label="Comments" type="text" onChange={this.handleChange}/>
-                    <Button color="primary" variant="contained" size="large" onClick={this.previousClick}>PREVIOUS</Button>
-                    <Button color="primary" variant="contained" size="large" onClick={this.buttonClick}>NEXT</Button> 
+                    <TextField  id="standard-basic" label="Comments" type="text"  onChange={this.handleChange}/>
+                    <div className="button">
+                        <Button className="form-previous" color="primary" variant="contained" size="large" onClick={this.previousClick}>PREVIOUS</Button>
+                        <Button className="form-next" color="primary" variant="contained" size="large" onClick={this.buttonClick}>NEXT</Button> 
+                    </div>
                 </div>     
             </div>
         )

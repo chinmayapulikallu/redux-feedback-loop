@@ -20,7 +20,6 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        {JSON.stringify(this.props.dispatch )}
         <Router>
           {/* Routes for components, FormFeeling is homepage */}
           <Route exact path="/" render={(props)=><FormFeelings {...props} dispatch={this.props.dispatch}/>} />

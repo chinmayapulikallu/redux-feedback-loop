@@ -16,20 +16,22 @@ class FormFeelings extends Component {
     }
 
     buttonClick = () => {
-        if(this.state.feeling === '') {
+        if(this.state.feeling === '0') {
             alert('select a value!!');
+        }else {
+            this.props.dispatch({
+                type: 'ADD_FEELING', payload: this.state.feeling
+            })
+            this.props.history.push('/understanding')
         }
-        this.props.dispatch({
-            type: 'ADD_FEELING', payload: this.state.feeling
-        })
-        this.props.history.push('/understanding')
     } // dispatching to reducer and moves to understanding page
 
     render() {
         return (
-            <div>
-                <h1>How are you feeling Today?</h1>
-                  <select id="feeling" name="Feeling?" onChange={this.handleChange}>
+            <div className="form">
+                <h1 className="form-header">How are you feeling Today?</h1>
+                <div>
+                    <select id="feeling" name="Feeling?" className="form-input" onChange={this.handleChange}>
                         <option value="0">0</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -37,8 +39,11 @@ class FormFeelings extends Component {
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select>
-                        
-                <Button  color="primary" variant="contained" size="large"  onClick={this.buttonClick}>NEXT</Button>
+                </div>                
+                 <div className="button">
+                    <Button color="primary" variant="contained" size="large" className="form-next" onClick={this.buttonClick}>NEXT</Button>
+                 </div>       
+                
             </div>
         )
     }

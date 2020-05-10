@@ -2,8 +2,24 @@ import React, { Component } from 'react';
 import AdminItem from '../AdminItem/AdminItem'
 import axios from 'axios';
 import { Button } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
+
+ const useStyles = makeStyles({
+    table: {
+        minWidth: 650,
+    },
+});
+
 
 class Admin extends Component {
+    // const classes = () => useStyles();
     state = {
         feedbackList: []
     }
@@ -13,10 +29,9 @@ class Admin extends Component {
 
     getFeedBack = () => {
         axios({
-            method: '/GET',
+            method: 'GET',
             url: '/feedback'
         }).then(response => {
-            console.log(response);
             this.setState({
                 feedbackList: response.data
             })
@@ -34,8 +49,24 @@ class Admin extends Component {
         return (
             <div>
                 <h1>Feedback Results</h1>
-                <table>
+                <TableContainer component={Paper}>
+                    <Table aria-label="simple table">
+                        <TableHead>
+                            <TableRow>
+                                <TableCell>Feeling</TableCell>
+                                <TableCell align="right">Understanding</TableCell>
+                                <TableCell align="right">Support</TableCell>
+                                <TableCell align="right">Comments</TableCell>
+                                <TableCell align="right">Delete</TableCell>
+                            </TableRow>
+                        </TableHead>
+                        <TableBody>{this.state.feedbackList.map(feedback =>
+                            <AdminItem key={feedback.id} feedback={feedback} />)}</TableBody>
+                        </Table>
+                        </TableContainer>
+                {/* <table>
                     <thead>
+
                         <tr>
                             <th>Feeling</th>
                             <th>Understanding</th>
@@ -43,12 +74,12 @@ class Admin extends Component {
                             <th>Comments</th>
                             <th>Delete</th>
                         </tr>
-                    </thead>
-                    <tbody>
+                    </thead> */}
+                    {/* <tbody>
                         {this.state.feedbackList.map(feedback => 
                         <AdminItem key={feedback.id} feedback={feedback}/> )}
                     </tbody>  
-                </table>
+                </table> */}
                 <Button color="primary" size="large" variant="contained" onClick={this.returnHome}>Back To Home</Button>
             </div>
         )
