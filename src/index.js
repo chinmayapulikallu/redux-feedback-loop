@@ -8,8 +8,7 @@ import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 
 const initialState = {
-    
-    feedbacks: []
+    feedbacks: []   //feedbacks Array to store the feedback 
 }
 
 const feedbackReducer = (state = initialState, action) => {
@@ -36,8 +35,10 @@ const feedbackReducer = (state = initialState, action) => {
         console.log('action payload', action.payload);
         return {
             feedbacks: [...state.feedbacks, { name: "comments", value: action.payload }]
-        }
-        
+        }   
+    } else if (action.type === 'NEW_FEEDBACK') {
+        state = '';
+        return state;
     }
     return state;
 }
