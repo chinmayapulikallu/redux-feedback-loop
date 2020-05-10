@@ -60,13 +60,13 @@ Before getting started, the following software have been installed on the comput
 
 ### Wireframes:
 
-![admin] [admin.png]
-![comments] [comments.png]
-![confirmation] [confirmation.png]
-![feeling app] [feeling.png]
-![review app] [review.png]
-![support app] [support.png]
-![understanding app] [understanding.png]
+![admin] (admin.png)
+![comments] (comments.png)
+![confirmation] (confirmation.png)
+![feeling app] (feeling.png)
+![review app] (review.png)
+![support app] (support.png)
+![understanding app] (understanding.png)
 
 
 
