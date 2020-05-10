@@ -57,19 +57,7 @@ class Review extends Component {
         console.log("review page :: ",this.props)
         // console.log("review page :: ", this.populateFeedback())
         const feedback = this.populateFeedback()
-        // console.log("feedback :: ", this.populateFeedback())
-        //setting values for the feedback from the store to render on DOM
-        let feelingValue = null
-        let understandingValue = null
-        let supportValue = null
-        let commentsValue = null
-
-        if (this.props.reduxState.feedbacks.length > 0) {
-            feelingValue = this.props.reduxState.feedbacks.find(feedback => feedback.name === 'feeling').value;
-            understandingValue = this.props.reduxState.feedbacks.find(feedback => feedback.name === 'understanding').value;
-            supportValue = this.props.reduxState.feedbacks.find(feedback => feedback.name === 'support').value;
-            commentsValue = this.props.reduxState.feedbacks.find(feedback => feedback.name === 'comments').value;
-        }
+        
          return (
             <div>
                <h1>Review Your Feedback</h1>
