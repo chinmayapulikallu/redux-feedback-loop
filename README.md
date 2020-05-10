@@ -58,6 +58,15 @@ Before getting started, the following software have been installed on the comput
    - [x] map data from server and render to dom
    - [x] Add a delete button on click to delete the feedback selected and update database
 
+### Wireframes:
+
+![admin] [admin.png]
+![comments] [comments.png]
+![confirmation] [confirmation.png]
+![feeling app] [feeling.png]
+![review app] [review.png]
+![support app] [support.png]
+![understanding app] [understanding.png]
 
 
 
