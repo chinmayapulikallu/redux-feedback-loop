@@ -15,30 +15,34 @@ const feedbackReducer = (state = initialState, action) => {
     console.log("current state :: ", state.feedbacks)
     if(action.type === 'ADD_FEELING') {
         console.log('action payload', action.payload);
+        const newFeedBacks = state.feedbacks.filter(feedback => feedback.name !== 'feeling')
         return {
-            feedbacks:[...state.feedbacks, {name:"feeling", value: action.payload}]
+            feedbacks: [...newFeedBacks, {name:"feeling", value: action.payload}]
         }
         
     } else if (action.type === 'ADD_UNDERSTANDING'){
         console.log('action payload', action.payload);
+        const newFeedBacks = state.feedbacks.filter(feedback => feedback.name !== 'understanding')
         return {
-            feedbacks:[...state.feedbacks, {name:"understanding", value: action.payload}]
+            feedbacks:[...newFeedBacks, {name:"understanding", value: action.payload}]
         }
        
     } else if (action.type === 'ADD_SUPPORT') {
         console.log('action payload', action.payload);
+        const newFeedBacks = state.feedbacks.filter(feedback => feedback.name !== 'support')
         return {
-            feedbacks: [...state.feedbacks, { name: "support", value: action.payload }]
+            feedbacks: [...newFeedBacks, { name: "support", value: action.payload }]
         }
      
     } else if (action.type === 'ADD_COMMENTS') {
         console.log('action payload', action.payload);
+        const newFeedBacks = state.feedbacks.filter(feedback => feedback.name !== 'comments')
         return {
-            feedbacks: [...state.feedbacks, { name: "comments", value: action.payload }]
+            feedbacks: [...newFeedBacks, { name: "comments", value: action.payload }]
         }   
     } else if (action.type === 'NEXT_FEEDBACK') {
         return state;
-    }
+     }
     return state;
 }
 

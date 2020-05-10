@@ -22,6 +22,10 @@ class FormUnderstand extends Component {
         this.props.history.push('/support')
     }  //dispatching to reducer and moves to support page
 
+    previousClick = () => {
+        this.props.history.push('/');
+    }  // allows users to go back to previous page and change their score.
+
     render() {
         return (
             <div className="formDiv">
@@ -39,6 +43,7 @@ class FormUnderstand extends Component {
                     </div>   
                 </div>
                 <button className="nextButton" onClick={this.buttonClick}>NEXT</button>
+                <button onClick={this.previousClick}>PREVIOUS</button>
             </div>
         )
     }

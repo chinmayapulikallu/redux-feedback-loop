@@ -21,6 +21,9 @@ class FormComments extends Component {
         this.props.history.push('/review');
     }  //dispatches to reducer, and takes to review page
 
+    previousClick = () => {
+        this.props.history.push('/understanding');
+    } // allows users to go back to previous page and change their score.
 
 
     render() {
@@ -32,6 +35,7 @@ class FormComments extends Component {
                     <input className="inputClass" type="text" onChange={this.handleChange}></input>
                 </div>
                 <button className="nextButton" onClick={this.buttonClick}>NEXT</button>
+                <button onClick={this.previousClick}>PREVIOUS</button>
             </div>
         )
     }
