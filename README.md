@@ -61,24 +61,31 @@ Before getting started, the following software have been installed on the comput
 ### Wireframes:
 
 - feeling
+
 ![feeling](feedbackwireframes/feeling.png)
 
 - understanding
+
 ![understanding](feedbackwireframes/understanding.png)
 
 - support
+
 ![support](feedbackwireframes/support.png)
 
 - comments
+
 ![comments](feedbackwireframes/comments.png)
 
 - review
+
 ![review](feedbackwireframes/review.png)
 
 - confirmation
+
 ![confirmation](feedbackwireframes/confirmation.png)
 
 - Admin 
+
 ![admin](feedbackwireframes/admin.png)
 
 
