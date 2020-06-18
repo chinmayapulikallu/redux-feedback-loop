@@ -28,36 +28,6 @@ Before getting started, the following software have been installed on the comput
 -  React
 -  Redux
 
-
-### Check List
-
-### Base Mode:
-- [x] Create database and tables
-- [x] install npm
-      - [x] run server
-      - [x] run client
-- [x] install redux
-    - [x] setup the base for Redux
-- [x] create components
-- [x] Import Routers
-    - [x] create a Next button 
-    - [x] link to the next components
-- [x] Create review component
-    - [x] submit button
-- [x] Send feedback to the server
-- [x] save the submission in database
-- [x] create submission success page
-    - [x] create a link to take a new survey
-    - [x] Reset the old values
-
-### Stretch Mode:
- 
- - [x] Update scores
- - [x] Styling using Material-UI
- - [x] Created Admin Component
-   - [x] map data from server and render to dom
-   - [x] Add a delete button on click to delete the feedback selected and update database
-
 ### Wireframes:
 
 - feeling
@@ -88,7 +58,22 @@ Before getting started, the following software have been installed on the comput
 
 ![admin](feedbackwireframes/admin.png)
 
+### Installation
 
+1. Install nodemon globally in our terminal by running the command "npm install nodemon --global".
+2. Upon downloading app, in your terminal run "npm install"
+3. In your terminal, run "npm install react-router-dom" to add this component into your project file. Set up this component within your project files.
+4. In your terminal, run "npm install react-redux" and import this into your project files.
+5. To run client side code, run "npm run client"
+6. In another terminal tab, spin up server by running "npm run server"
+
+
+### How to Use App
+
+1. On page load, you will see the first question of the form appear. It will have a drop down selector for answers. Once you select your answer, hit the next button to continue.
+2. Once all the questions have been answered, you will be directed to comments page, for you to leave comments on how you feel about the day. This is an optional field.
+3. After entering your inputs you will be directed to review page where you can view all your answers. You will have the ability to go back to previous questions and update answers. Once updated you can click submit button and your answers will be saved.
+4. Finally, confirmation page will show the success feedback submitted message and will redirect to home page or  go to admin page to delete a feedback or view feedbacks.
 
 
 
